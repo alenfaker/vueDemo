@@ -6,11 +6,11 @@
 </template>
 <script>
     export default {
-        data () {
-            return{
-            active: 'tab-container2',
-        }
-    }
+    	data () {
+    		return{
+    			active: 'tab-container2',
+    		}
+    	}
     }
 </script>
 <style lang='scss'>

@@ -11,54 +11,54 @@
 
 <script>
 export default {
-  name: 'tabBar',
-  data() {
-    return {
-      selected: this.isSelected,
-      tabMenus: this.tabs
-    }
-  },  
-  props: {
-    isSelected: String,
-    tabs: Array
-},
-created: function () {
+	name: 'tabBar',
+	data() {
+		return {
+			selected: this.isSelected,
+			tabMenus: this.tabs
+		}
+	},  
+	props: {
+		isSelected: String,
+		tabs: Array
+	},
+	created: function () {
 
 
-},
-  computed: {
-    // bool: function () {
-    //   if (this.selected === this.id) {
-    //     return true;
-    //   }
-    //   return false;
-    // }
-  },
-   watch: {
-    selected: function(val, oldValue) {
-      switch (val) {
-        case 'home':
-          this.$router.push('/home');
+	},
+	computed: {
+		// bool: function () {
+		//   if (this.selected === this.id) {
+		//     return true;
+		//   }
+		//   return false;
+		// }
+	},
+	watch: {
+		selected: function(val) {
+			switch (val) {
+			case 'home':
+				this.$router.push('/home')
 
-          break;
-        case 'invest':
-          this.$router.push('/invest')
-
-
-          break;
-        case 'version':
-          this.$router.push('/version')
+				break
+			case 'invest':
+				this.$router.push('/invest')
 
 
-          break;
-        case 'user':
-          this.$router.push('/user')
+				break
+			case 'version':
+				this.$router.push('/version')
 
 
-          break;
-      }
-    }
-  }
+				break
+			case 'user':
+				this.$router.push('/user')
+
+
+				break
+			}
+		}
+	}
 }
 
 </script>

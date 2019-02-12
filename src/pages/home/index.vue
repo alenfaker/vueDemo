@@ -29,49 +29,49 @@
 </template>
 <script>
     export default {
-      data() {
-        return {
-          selected: "首页",
-          swiperOption: {
-            // some swiper options/callbacks
-            // 所有的参数同 swiper 官方 api 参数
-            // ...reset
-            pagination: {
-              el: ".swiper-pagination"
-            },
-            speed: 300,
-            autoplay: {
-              delay: 1000
-            }
-          },
-          swiperSlides: [1, 2, 3, 4, 5]
-        };
-      },
-      computed: {
-        swiper() {
-          return this.$refs.mySwiper.swiper;
-        }
-      },
-      mounted() {
-        this.initBanner();
-      },
-      methods: {
-        initBanner() {
-          this.$http
-            .jsonp(
-              "https://www.myerong.com/sysInfo.action?method=advServletByStrType&strType=PC",
-              {},
-              {
-                headers: {},
-                emulateJSON: true
-              }
-            )
-            .then(response => {
-              console.log(response);
-            });
-        }
-      }
-    };
+    	data() {
+    		return {
+    			selected: '首页',
+    			swiperOption: {
+    				// some swiper options/callbacks
+    				// 所有的参数同 swiper 官方 api 参数
+    				// ...reset
+    				pagination: {
+    					el: '.swiper-pagination'
+    				},
+    				speed: 300,
+    				autoplay: {
+    					delay: 1000
+    				}
+    			},
+    			swiperSlides: [1, 2, 3, 4, 5]
+    		}
+	},
+    	computed: {
+    		swiper() {
+    			return this.$refs.mySwiper.swiper
+    		}
+    	},
+    	mounted() {
+    		this.initBanner()
+	},
+    	methods: {
+    		initBanner() {
+    			this.$http
+    				.jsonp(
+    					'https://www.myerong.com/sysInfo.action?method=advServletByStrType&strType=PC',
+    					{},
+    					{
+    						headers: {},
+    						emulateJSON: true
+    					}
+    				)
+    				.then(response => {
+    					console.info(response)
+    				})
+		}
+    	}
+    }
 </script>
 <style lang='scss'>
 .home-page {

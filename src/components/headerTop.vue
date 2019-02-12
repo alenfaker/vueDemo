@@ -11,12 +11,12 @@
 
 <script>
     export default {
-        name: 'headerTop',
-        data () {
-            return {
+    	name: 'headerTop',
+    	data () {
+    		return {
 
-            }
-        }
+    		}
+    	}
     }
 </script>
 
